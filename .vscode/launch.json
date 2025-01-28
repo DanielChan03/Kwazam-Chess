@@ -1,0 +1,98 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "MainProgram",
+            "request": "launch",
+            "mainClass": "main.MainProgram",
+            "projectName": "OOAD Kwazam Chess Fomalhaut _c8ec9426"
+        },
+        {
+            "type": "java",
+            "name": "MainProgram",
+            "request": "launch",
+            "mainClass": "main.MainProgram",
+            "projectName": "OOAD Kwazan Chess Finalised version_cf6f6aeb"
+        },
+        {
+            "type": "java",
+            "name": "MainProgram",
+            "request": "launch",
+            "mainClass": "main.MainProgram",
+            "projectName": "OOAD Kwazan Chess Load & Save ram image reversed_4c70eae4"
+        },
+        {
+            "type": "java",
+            "name": "MainProgram",
+            "request": "launch",
+            "mainClass": "main.MainProgram",
+            "projectName": "OOAD Kwazan Chess Load & Save resize board_7d9a3475"
+        },
+        {
+            "type": "java",
+            "name": "MainProgram",
+            "request": "launch",
+            "mainClass": "main.MainProgram",
+            "projectName": "OOAD Kwazan Chess Load & Save one to many_99d969cf"
+        },
+        {
+            "type": "java",
+            "name": "MainProgram",
+            "request": "launch",
+            "mainClass": "main.MainProgram",
+            "projectName": "OOAD Kwazan Chess Load & Save refactoring_3ffd4c05"
+        },
+        {
+            "type": "java",
+            "name": "MainProgram",
+            "request": "launch",
+            "mainClass": "main.MainProgram",
+            "projectName": "OOAD Kwazan Chess Load & Save stable_921ccf76"
+        },
+        {
+            "type": "java",
+            "name": "MainProgram",
+            "request": "launch",
+            "mainClass": "main.MainProgram",
+            "projectName": "OOAD Kwazan Chess Try_734a702f"
+        },
+        {
+            "type": "java",
+            "name": "MainProgram",
+            "request": "launch",
+            "mainClass": "main.MainProgram",
+            "projectName": "OOAD bug_722c5672"
+        },
+        {
+            "type": "java",
+            "name": "MainProgram",
+            "request": "launch",
+            "mainClass": "main.MainProgram",
+            "projectName": "OOAD game_d36073b4"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "ChessBoard",
+            "request": "launch",
+            "mainClass": "ChessBoard",
+            "projectName": "OOAD game_d36073b4"
+        },
+        {
+            "type": "java",
+            "name": "RamPiece",
+            "request": "launch",
+            "mainClass": "RamPiece",
+            "projectName": "OOAD game_d36073b4"
+        }
+    ]
+}
