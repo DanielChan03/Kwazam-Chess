@@ -7,7 +7,7 @@ Kwazam Chess is a unique chess-like game with custom rules and pieces. This proj
 a graphical user interface (GUI) for playing the game. The game includes special pieces like RAM, BIZ, TOR, XOR, and SAU, 
 each with unique movement rules.
 
-
+### Directory Structure
 ==Table of Contents==
 
 Features
@@ -68,19 +68,22 @@ Use the Load option to load a previously saved game.
 Reset the Game:
 Use the Reset Game option to restart the game.
 
-==Game Rules==
 
-Pieces:
-RAM: Moves forward or backward in a straight line, depending on its reverse state.
-BIZ: Moves like a knight in standard chess.
-TOR: Moves like a rook in standard chess.
-XOR: Moves diagonally like a bishop in standard chess.
-SAU: Moves one square in any direction (like a king in standard chess).
+### Game Rules
+| Piece | Movement Rules                          |
+|-------|-----------------------------------------|
+| RAM   | Moves forward/backward in a straight line |
+| BIZ   | Moves like a knight in standard chess     |
+| TOR   | Moves like a rook in standard chess       |
+| XOR   | Moves diagonally like a bishop            |
+| SAU   | Moves one square in any direction         |
+
 Winning Condition:
 The game ends when one player captures the opponent's SAU piece.
 Special Rules:
 RAM pieces reverse direction when they reach the edge of the board.
 XOR and TOR pieces switch roles every 4 moves(2 turn count).
+
 
 
 ==Code Structure==
