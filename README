@@ -1,24 +1,40 @@
 Project: Kwazam Chess Game
-Author:
-Daniel Chan (MMU Malaysia)
-Eric Teo (MMU Malaysia)
+## Authors:
+- **Daniel Chan** (MMU Malaysia)
+- **Eric Teo** (MMU Malaysia)
 
+=====Introduction=====
 Kwazam Chess is a unique chess-like game with custom rules and pieces. This project is implemented in Java and features 
 a graphical user interface (GUI) for playing the game. The game includes special pieces like RAM, BIZ, TOR, XOR, and SAU, 
 each with unique movement rules.
 
-### Directory Structure
+
 ==Table of Contents==
 
-Features
-Installation
-How to Play
-Game Rules
-Code Structure
-License
+- Directory Structure
+- Features
+- Installation
+- How to Play
+- Game Rules
+- Code Structure
+- License
 
 
-==Features==
+### Directory Structure
+
+kwazam-chess/
+├── src/
+│   ├── main/
+│   │   ├── controller/
+│   │   ├── model/
+│   │   ├── view/
+│   │   └── main/
+│   │   └── resources/
+├── out/
+└── README.md
+
+
+### Features
 
 Custom Chess Pieces: Each piece has unique movement rules.
 Graphical User Interface: Play the game using a visually appealing board.
@@ -28,7 +44,7 @@ Move Hints: Highlight valid moves for the selected piece.
 Resizable Board: Adjust the board size dynamically.
 
 
-==Installation==
+### Installation
 
 Prerequisites:
 Java Development Kit (JDK) 11 or higher.
@@ -51,7 +67,7 @@ From the command line:
 java -cp out main.MainProgram
 
 
-==How to Play==
+### How to Play
 
 Start the Game:
 Launch the game, and the board will initialize with pieces in their starting positions.
@@ -85,35 +101,33 @@ RAM pieces reverse direction when they reach the edge of the board.
 XOR and TOR pieces switch roles every 4 moves(2 turn count).
 
 
-
-==Code Structure==
+### Code Structure
 
 The project is organized into the following packages:
 
-model
-
+==>model
 Contains the game logic, including the board, pieces, and game state.
 Key Classes:
 ChessBoard: Manages the board and piece positions.
 ChessPiece: Abstract base class for all pieces.
 RamPiece, BizPiece, TorPiece, XorPiece, SauPiece: Implementations of custom pieces.
-controller
 
+==>controller
 Handles user input and game flow.
 Key Classes:
 GameController: Central controller for the game.
 MovementHandler: Handles piece movements.
 HighlightHandler: Manages highlighting valid moves.
 MenuHandler: Handles menu actions (e.g., save, load, reset).
-view
 
+==>view
 Manages the graphical user interface.
 Key Classes:
 View: Main GUI class.
 BoardGUI: Renders the chess board and pieces.
 HighlightableButton: Custom button for highlighting moves.
-main
 
+==>main
 Contains the entry point for the application.
 Key Class:
 MainProgram: Launches the game.
@@ -122,3 +136,5 @@ MainProgram: Launches the game.
 ## License
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC). 
 You are free to share and adapt the code for non-commercial purposes, but commercial use is strictly prohibited.
+
+Kwazam Chess Game © 2025 by Daniel Chan is licensed under CC BY-NC 4.0.
