@@ -1,8 +1,121 @@
+Project: Kwazam Chess Game
 Author:
 Daniel Chan (MMU Malaysia)
 Eric Teo (MMU Malaysia)
 
+Kwazam Chess is a unique chess-like game with custom rules and pieces. This project is implemented in Java and features 
+a graphical user interface (GUI) for playing the game. The game includes special pieces like RAM, BIZ, TOR, XOR, and SAU, 
+each with unique movement rules.
+
+
+==Table of Contents==
+
+Features
+Installation
+How to Play
+Game Rules
+Code Structure
+License
+
+
+==Features==
+
+Custom Chess Pieces: Each piece has unique movement rules.
+Graphical User Interface: Play the game using a visually appealing board.
+Save and Load Games: Save your progress and load it later.
+Auto-Flip Board: Automatically flip the board view after each move.
+Move Hints: Highlight valid moves for the selected piece.
+Resizable Board: Adjust the board size dynamically.
+
+
+==Installation==
+
+Prerequisites:
+Java Development Kit (JDK) 11 or higher.
+A Java IDE (e.g., IntelliJ IDEA, Eclipse) or command-line tools.
+Steps
+
+Clone the Repository:
+git clone https://github.com/your-repo/kwazam-chess.git
+cd kwazam-chess
+
+Compile the Code:
+If using an IDE, import the project and build it.
+If using the command line:
+javac -d out src/main/**/*.java
+
+Run the Game:
+From the IDE, run the MainProgram class.
+
+From the command line:
+java -cp out main.MainProgram
+
+
+==How to Play==
+
+Start the Game:
+Launch the game, and the board will initialize with pieces in their starting positions.
+Move a Piece:
+Click on a piece to select it. Valid moves will be highlighted if Move Hint is enabled.
+Click on a highlighted square to move the piece.
+Toggle Features:
+Use the menu to toggle Auto-Flip and Move Hint features.
+Auto-Flip: Automatically flips the board view after each move.
+Move Hint: Highlights valid moves for the selected piece.
+Save and Load Games:
+Use the Save option in the menu to save your game progress.
+Use the Load option to load a previously saved game.
+Reset the Game:
+Use the Reset Game option to restart the game.
+
+==Game Rules==
+
+Pieces:
+RAM: Moves forward or backward in a straight line, depending on its reverse state.
+BIZ: Moves like a knight in standard chess.
+TOR: Moves like a rook in standard chess.
+XOR: Moves diagonally like a bishop in standard chess.
+SAU: Moves one square in any direction (like a king in standard chess).
+Winning Condition:
+The game ends when one player captures the opponent's SAU piece.
+Special Rules:
+RAM pieces reverse direction when they reach the edge of the board.
+XOR and TOR pieces switch roles every 4 moves(2 turn count).
+
+
+==Code Structure==
+
+The project is organized into the following packages:
+
+model
+
+Contains the game logic, including the board, pieces, and game state.
+Key Classes:
+ChessBoard: Manages the board and piece positions.
+ChessPiece: Abstract base class for all pieces.
+RamPiece, BizPiece, TorPiece, XorPiece, SauPiece: Implementations of custom pieces.
+controller
+
+Handles user input and game flow.
+Key Classes:
+GameController: Central controller for the game.
+MovementHandler: Handles piece movements.
+HighlightHandler: Manages highlighting valid moves.
+MenuHandler: Handles menu actions (e.g., save, load, reset).
+view
+
+Manages the graphical user interface.
+Key Classes:
+View: Main GUI class.
+BoardGUI: Renders the chess board and pieces.
+HighlightableButton: Custom button for highlighting moves.
+main
+
+Contains the entry point for the application.
+Key Class:
+MainProgram: Launches the game.
+
+
 ## License
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC). 
 You are free to share and adapt the code for non-commercial purposes, but commercial use is strictly prohibited.
-
