@@ -38,24 +38,32 @@ kwazam-chess/
 ### b. Features
 
 Custom Chess Pieces: Each piece has unique movement rules.
+
 Graphical User Interface: Play the game using a visually appealing board.
+
 Save and Load Games: Save your progress and load it later.
+
 Auto-Flip Board: Automatically flip the board view after each move.
+
 Move Hints: Highlight valid moves for the selected piece.
+
 Resizable Board: Adjust the board size dynamically.
 
 
 ### c. Installation
 
-Prerequisites:
+*1. Prerequisites:*
 Java Development Kit (JDK) 11 or higher.
 A Java IDE (e.g., IntelliJ IDEA, Eclipse) or command-line tools.
-Steps
+
+*2. Installation Steps*:
 
 Clone the Repository:
+
+```bash
 git clone https://github.com/DanielChan03/Kwazam-Chess.git
 cd kwazam-chess
-
+```
 Compile the Code:
 If using an IDE, import the project and build it.
 For MacOS/ Linux, if using the command line:
@@ -64,7 +72,7 @@ For MacOS/ Linux, if using the command line:
 find . -name "*.java" | xargs javac -d out
 cp -r resources out/
 ```
-Or Windows:
+Or Windows (Powershell):
 
 ```bash
 Get-ChildItem -Recurse -Filter *.java | ForEach-Object { javac -d out $_.FullName }
