@@ -1,4 +1,5 @@
-Project: Kwazam Chess Game
+# Project: Kwazam Chess Game
+
 ## Authors:
 - **Daniel Chan** (MMU Malaysia)
 - **Alex Teo** (MMU Malaysia)
