@@ -21,7 +21,7 @@ each with unique movement rules.
 - License
 
 
-### a.Directory Structure
+### a. Directory Structure
 
 ```bash
 kwazam-chess/
@@ -35,7 +35,7 @@ kwazam-chess/
 └── README.md
 ```
 
-### b.Features
+### b. Features
 
 Custom Chess Pieces: Each piece has unique movement rules.
 Graphical User Interface: Play the game using a visually appealing board.
@@ -45,7 +45,7 @@ Move Hints: Highlight valid moves for the selected piece.
 Resizable Board: Adjust the board size dynamically.
 
 
-### c.Installation
+### c. Installation
 
 Prerequisites:
 Java Development Kit (JDK) 11 or higher.
@@ -80,7 +80,7 @@ From the command line:
 java -cp out main.MainProgram
 ```
 
-### d.How to Play
+### d. How to Play
 
 1. Start the Game:
 Launch the game, and the board will initialize with pieces in their starting positions.
@@ -104,7 +104,7 @@ Use the Load option to load a previously saved game.
 Use the Reset Game option to restart the game.
 
 
-### e.Game Rules
+### e. Game Rules
 | Piece | Movement Rules                            |
 |-------|-----------------------------------------  |
 | RAM   | Moves forward/backward in a straight line |
@@ -121,7 +121,7 @@ RAM pieces reverse direction when they reach the edge of the board.
 XOR and TOR pieces switch roles every 4 moves(2 turn count).
 
 
-### f.Code Structure
+### f. Code Structure
 
 The project is organized into the following packages:
 
@@ -157,7 +157,7 @@ Key Class:
 MainProgram: Launches the game.
 
 
-## g.License
+## g. License
 This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC)]
 (https://creativecommons.org/licenses/by-nc/4.0/).
 You are free to share and adapt the code for non-commercial purposes, but commercial use is strictly prohibited.
