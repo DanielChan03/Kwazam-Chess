@@ -56,8 +56,26 @@ cd kwazam-chess
 
 Compile the Code:
 If using an IDE, import the project and build it.
-If using the command line:
-javac -d out main/**/*.java
+For MacOS/ Linux, if using the command line:
+
+```bash
+find . -name "*.java" | xargs javac -d out
+
+cp -r resources out/
+
+java -cp out main.MainProgram
+```
+Or Windows:
+
+```bash
+
+Get-ChildItem -Recurse -Filter *.java | ForEach-Object { javac -d out $_.FullName }
+
+Copy-Item resources out\resources -Recurse
+
+java -cp out main.MainProgram
+
+```
 
 Run the Game:
 From the IDE, run the MainProgram class.
@@ -85,8 +103,8 @@ Use the Reset Game option to restart the game.
 
 
 ### Game Rules
-| Piece | Movement Rules                          |
-|-------|-----------------------------------------|
+| Piece | Movement Rules                            |
+|-------|-----------------------------------------  |
 | RAM   | Moves forward/backward in a straight line |
 | BIZ   | Moves like a knight in standard chess     |
 | TOR   | Moves like a rook in standard chess       |
