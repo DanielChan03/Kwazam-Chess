@@ -3,13 +3,14 @@ Project: Kwazam Chess Game
 - **Daniel Chan** (MMU Malaysia)
 - **Alex Teo** (MMU Malaysia)
 
-=====Introduction=====
+## =====Introduction=====
+
 Kwazam Chess is a unique chess-like game with custom rules and pieces. This project is implemented in Java and features 
 a graphical user interface (GUI) for playing the game. The game includes special pieces like RAM, BIZ, TOR, XOR, and SAU, 
 each with unique movement rules.
 
 
-==Table of Contents==
+## ==Table of Contents==
 
 - Directory Structure
 - Features
@@ -20,8 +21,9 @@ each with unique movement rules.
 - License
 
 
-### Directory Structure
+### a.Directory Structure
 
+```bash
 kwazam-chess/
 ├── main/
 │   ├── controller/
@@ -31,9 +33,9 @@ kwazam-chess/
 │   └── resources/
 ├── out/
 └── README.md
+```
 
-
-### Features
+### b.Features
 
 Custom Chess Pieces: Each piece has unique movement rules.
 Graphical User Interface: Play the game using a visually appealing board.
@@ -43,7 +45,7 @@ Move Hints: Highlight valid moves for the selected piece.
 Resizable Board: Adjust the board size dynamically.
 
 
-### Installation
+### c.Installation
 
 Prerequisites:
 Java Development Kit (JDK) 11 or higher.
@@ -60,49 +62,49 @@ For MacOS/ Linux, if using the command line:
 
 ```bash
 find . -name "*.java" | xargs javac -d out
-
 cp -r resources out/
-
-java -cp out main.MainProgram
 ```
 Or Windows:
 
 ```bash
-
 Get-ChildItem -Recurse -Filter *.java | ForEach-Object { javac -d out $_.FullName }
-
 Copy-Item resources out\resources -Recurse
-
-java -cp out main.MainProgram
-
 ```
 
 Run the Game:
 From the IDE, run the MainProgram class.
 
 From the command line:
+
+```bash
 java -cp out main.MainProgram
+```
 
+### d.How to Play
 
-### How to Play
-
-Start the Game:
+1. Start the Game:
 Launch the game, and the board will initialize with pieces in their starting positions.
-Move a Piece:
+
+2. Move a Piece:
 Click on a piece to select it. Valid moves will be highlighted if Move Hint is enabled.
 Click on a highlighted square to move the piece.
-Toggle Features:
+
+3. Toggle Features:
 Use the menu to toggle Auto-Flip and Move Hint features.
-Auto-Flip: Automatically flips the board view after each move.
-Move Hint: Highlights valid moves for the selected piece.
-Save and Load Games:
+
+4. Auto-Flip: Automatically flips the board view after each move.
+   
+5. Move Hint: Highlights valid moves for the selected piece.
+   
+6. Save and Load Games:
 Use the Save option in the menu to save your game progress.
 Use the Load option to load a previously saved game.
-Reset the Game:
+
+7. Reset the Game:
 Use the Reset Game option to restart the game.
 
 
-### Game Rules
+### e.Game Rules
 | Piece | Movement Rules                            |
 |-------|-----------------------------------------  |
 | RAM   | Moves forward/backward in a straight line |
@@ -113,16 +115,18 @@ Use the Reset Game option to restart the game.
 
 Winning Condition:
 The game ends when one player captures the opponent's SAU piece.
+
 Special Rules:
 RAM pieces reverse direction when they reach the edge of the board.
 XOR and TOR pieces switch roles every 4 moves(2 turn count).
 
 
-### Code Structure
+### f.Code Structure
 
 The project is organized into the following packages:
 
 ==>model
+
 Contains the game logic, including the board, pieces, and game state.
 Key Classes:
 ChessBoard: Manages the board and piece positions.
@@ -130,6 +134,7 @@ ChessPiece: Abstract base class for all pieces.
 RamPiece, BizPiece, TorPiece, XorPiece, SauPiece: Implementations of custom pieces.
 
 ==>controller
+
 Handles user input and game flow.
 Key Classes:
 GameController: Central controller for the game.
@@ -138,6 +143,7 @@ HighlightHandler: Manages highlighting valid moves.
 MenuHandler: Handles menu actions (e.g., save, load, reset).
 
 ==>view
+
 Manages the graphical user interface.
 Key Classes:
 View: Main GUI class.
@@ -145,12 +151,13 @@ BoardGUI: Renders the chess board and pieces.
 HighlightableButton: Custom button for highlighting moves.
 
 ==>main
+
 Contains the entry point for the application.
 Key Class:
 MainProgram: Launches the game.
 
 
-## License
+## g.License
 This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC)]
 (https://creativecommons.org/licenses/by-nc/4.0/).
 You are free to share and adapt the code for non-commercial purposes, but commercial use is strictly prohibited.
