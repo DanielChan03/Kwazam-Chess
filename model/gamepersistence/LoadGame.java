@@ -13,11 +13,14 @@ import model.chess.ChessPiece;
 
 public class LoadGame {
 
-    private String loadFile;
+private String loadFile;
+private static final String SAVE_DIR =
+    System.getProperty("user.home") + "/KwazamChess/";
 
-    LoadGame(String loadFile) {
-        this.loadFile = loadFile;
-    }
+    LoadGame(String fileName) {
+        new java.io.File(SAVE_DIR).mkdirs();
+        this.loadFile = fileName;
+}
 
     public void loadGame(Model model) {
         try (BufferedReader reader = new BufferedReader(new FileReader(loadFile))) {

@@ -11,7 +11,8 @@ public class GameDataManager {
     private String saveDirectory;
 
     public GameDataManager() {
-        this.saveDirectory = System.getProperty("user.dir") + File.separator + "savedfiles";
+        this.saveDirectory = System.getProperty("user.home")
+        + File.separator + "KwazamChess";
     }
 
     public void saveGame(String gameName, int movementCounter, ChessBoard board) {
