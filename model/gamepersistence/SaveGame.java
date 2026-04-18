@@ -12,10 +12,16 @@ import model.chess.ChessPieceType;
 import model.chess.RamPiece;
 
 public class SaveGame {
-    private String saveFile;
 
-    SaveGame(String saveFile) {
-        this.saveFile = saveFile;
+private String saveFile;
+private static final String SAVE_DIR =
+    System.getProperty("user.home") + "/KwazamChess/";
+
+    SaveGame(String fileName) {
+        new java.io.File(SAVE_DIR).mkdirs();
+
+        // prevent user breaking path + allow multiple saves
+        this.saveFile = fileName;
     }
 
     public void saveGame(int movementCounter, ChessBoard board) {
