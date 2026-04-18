@@ -60,14 +60,12 @@ public class SoundHandler {
 
     private Clip createClip(String filePath) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         // Load the sound file
-        InputStream audioInputStream = getClass().getResourceAsStream(filePath);
-        if (audioInputStream == null) {
-            throw new IOException("Sound file not found: " + filePath);
-        }
-
-        // Create a new Clip
+        
         Clip clip = AudioSystem.getClip();
-        clip.open(AudioSystem.getAudioInputStream(audioInputStream));
+        AudioInputStream audioIn = AudioSystem.getAudioInputStream(
+            getClass().getResource(filePath)
+        );
+        clip.open(audioIn);
 
         // Adjust the volume (gain)
         FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
