@@ -27,10 +27,9 @@ each with unique movement rules.
 ```bash
 kwazam-chess/
 ├── main/
-│   ├── controller/
-│   ├── model/
-│   ├── view/
-│   └── main/
+├── controller/
+├── model/
+├── view/
 │   └── resources/
 ├── out/
 └── README.md
