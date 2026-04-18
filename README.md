@@ -30,7 +30,9 @@ kwazam-chess/
 ├── controller/
 ├── model/
 ├── view/
-│   └── resources/
+├── resources/
+│       ├── images/
+│       └── sound_effect/
 ├── out/
 └── README.md
 ```
