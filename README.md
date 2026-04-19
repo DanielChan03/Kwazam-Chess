@@ -60,7 +60,19 @@ A Java IDE (e.g., IntelliJ IDEA, Eclipse) or command-line tools.
 
 *2. Installation Steps*:
 
-Clone the Repository:
+*Option A*: macOS (Recommended – DMG Application)
+
+1. Download the .dmg file from the [GitHub Releases page](https://github.com/DanielChan03/Kwazam-Chess/releases/tag/v1.0).
+2. Open the .dmg file.
+3. Drag KwazamChess.app into the Applications folder.
+4. Open Applications → KwazamChess to launch the game.
+
+If macOS blocks the app:
+
+* Go to System Settings → Privacy & Security
+* Click “Open Anyway”
+  
+*Option B*: Clone the Repository:
 
 ```bash
 git clone https://github.com/DanielChan03/Kwazam-Chess.git
@@ -108,6 +120,7 @@ Use the menu to toggle Auto-Flip and Move Hint features.
    
 6. Save and Load Games:
 Use the Save option in the menu to save your game progress.
+Use the Auto-Save option to save the game after every move.
 Use the Load option to load a previously saved game.
 
 7. Reset the Game:
