@@ -1,9 +1,5 @@
 # Project: Kwazam Chess Game
 
-## Authors:
-- **Daniel Chan** (MMU Malaysia)
-- **Alex Teo** (MMU Malaysia)
-
 ## =====Introduction=====
 
 Kwazam Chess is a unique chess-like game with custom rules and pieces. This project is implemented in Java and features 
