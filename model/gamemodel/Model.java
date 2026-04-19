@@ -69,6 +69,11 @@ public class Model {
         gamePersistence.loadGame(gameName, this);
     }
 
+    public void autoSaveGame() {
+        int movementCounter = gameBoard.getMovementCounter();
+        gamePersistence.autoSave(movementCounter, gameBoard);
+    }
+
     public List<String> listSavedGames() {
         return gamePersistence.listSavedGames();
     }

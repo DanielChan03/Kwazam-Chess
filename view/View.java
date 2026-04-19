@@ -117,7 +117,7 @@ public class View {
     }
 
     public void startGameMessage() {
-        JOptionPane.showMessageDialog(frame, "Click to Start!", "KWAZAN CHESS", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(frame, "Click to Start!", "KWAZAM CHESS", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public void resetGameMessage() {
@@ -137,7 +137,7 @@ public class View {
     }
 
     public String saveGameNameMessage() {
-        return JOptionPane.showInputDialog(frame, "Enter a name for the saved game:", "Save Game", JOptionPane.PLAIN_MESSAGE);
+        return JOptionPane.showInputDialog(frame, "Save game as (existing save will be replaced):", "Save Game", JOptionPane.PLAIN_MESSAGE);
     }
 
     public void loadGameMessage() {

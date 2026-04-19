@@ -10,6 +10,7 @@ public class GameMenu {
     private JMenuItem[] menuItems;
     private JCheckBoxMenuItem autoFlipCheckBox;
     private JCheckBoxMenuItem moveHintCheckBox;
+    private JCheckBoxMenuItem autoSaveCheckBox;
 
     GameMenu(JFrame frame){
         createMenuBar(frame);
@@ -25,18 +26,21 @@ public class GameMenu {
 
         // Create a "View" menu
         JMenu viewMenu = new JMenu("Menu");
-        menuItems = new JMenuItem[5];
+        menuItems = new JMenuItem[6];
 
         this.menuItems[0] = new JMenuItem("Reset Game");
         this.menuItems[1] = new JMenuItem("Save");
-        this.menuItems[2] = new JMenuItem("Load");
+        this.autoSaveCheckBox = new JCheckBoxMenuItem("Auto-Save");
+        autoSaveCheckBox.setSelected(false);
+        this.menuItems[2] = autoSaveCheckBox;
+        this.menuItems[3] = new JMenuItem("Load");
         
         this.autoFlipCheckBox = new JCheckBoxMenuItem("Auto-Flip");
         this.moveHintCheckBox = new JCheckBoxMenuItem("Move Hint");
         autoFlipCheckBox.setSelected(true);
         moveHintCheckBox.setSelected(true);
-        this.menuItems[3] = autoFlipCheckBox;
-        this.menuItems[4] = moveHintCheckBox;
+        this.menuItems[4] = autoFlipCheckBox;
+        this.menuItems[5] = moveHintCheckBox;
 
         // Add the menu item to the "View" menu
         for(int i =0; i < menuItems.length;i++)

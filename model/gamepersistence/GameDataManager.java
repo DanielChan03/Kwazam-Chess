@@ -12,7 +12,7 @@ public class GameDataManager {
 
     public GameDataManager() {
         this.saveDirectory = System.getProperty("user.home")
-        + File.separator + "KwazamChess";
+                + File.separator + "KwazamChess";
     }
 
     public void saveGame(String gameName, int movementCounter, ChessBoard board) {
@@ -30,7 +30,22 @@ public class GameDataManager {
         saveGame.saveGame(movementCounter, board);
     }
 
+    public void autoSave(int movementCounter, ChessBoard board) {
+        File saveDir = new File(saveDirectory);
+        if (!saveDir.exists()) {
+            saveDir.mkdirs();
+        }
+
+        File autoFile = new File(saveDir, "autosave.txt");
+        SaveGame saveGame = new SaveGame(autoFile.getAbsolutePath());
+        saveGame.saveGame(movementCounter, board);
+    }
+
     public void loadGame(String gameName, Model model) {
+        if (!gameName.endsWith(".txt")) {
+            gameName += ".txt";
+        }
+
         File saveFile = new File(saveDirectory, gameName);
         LoadGame loadGame = new LoadGame(saveFile.getAbsolutePath());
         loadGame.loadGame(model);
@@ -45,7 +60,13 @@ public class GameDataManager {
         File[] saveFiles = saveDir.listFiles((dir, name) -> name.endsWith(".txt"));
         List<String> fileNames = new ArrayList<>();
         for (File file : saveFiles) {
-            fileNames.add(file.getName());
+            String name = file.getName();
+            // remove ".txt"
+            if (name.endsWith(".txt")) {
+                name = name.substring(0, name.length() - 4);
+            }
+
+            fileNames.add(name);
         }
         return fileNames;
     }
