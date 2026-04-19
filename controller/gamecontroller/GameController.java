@@ -57,6 +57,10 @@ public class GameController implements ActionListener {
         return controller;
     }
 
+    public MenuHandler getMenuHandler(){
+        return this.menuHandler;
+    }
+
     // Start game in main program
     public void startProgram() {
         menuHandler.handleStartGame();
@@ -70,6 +74,10 @@ public class GameController implements ActionListener {
         return view;
     }
 
+    public void getAutoSave(){
+
+    }
+
 
     public void playSound(String soundFilePath, boolean isCritical) {
         
@@ -80,9 +88,10 @@ public class GameController implements ActionListener {
         // Add listeners for menu items
         view.getMenuItems()[0].addActionListener(e -> menuHandler.handleResetGame());
         view.getMenuItems()[1].addActionListener(e -> menuHandler.handleSaveGame());
-        view.getMenuItems()[2].addActionListener(e -> menuHandler.handleLoadGame());
-        view.getMenuItems()[3].addActionListener(e -> menuHandler.toggleAutoFlip());
-        view.getMenuItems()[4].addActionListener(e -> menuHandler.toggleMoveHint());
+        view.getMenuItems()[2].addActionListener(e -> menuHandler.toggleAutoSave());
+        view.getMenuItems()[3].addActionListener(e -> menuHandler.handleLoadGame());
+        view.getMenuItems()[4].addActionListener(e -> menuHandler.toggleAutoFlip());
+        view.getMenuItems()[5].addActionListener(e -> menuHandler.toggleMoveHint());
 
         for (int row = 0; row < view.getButtons().length; row++) {
             for (int col = 0; col < view.getButtons()[row].length; col++) {
@@ -113,7 +122,7 @@ public class GameController implements ActionListener {
         }
     }
 
-    private void checkGameOver() {
+    public void checkGameOver() {
         if (model.isGameOver()) {
             menuHandler.handleGameOver();
         }

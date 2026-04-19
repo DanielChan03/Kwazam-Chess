@@ -45,6 +45,7 @@ public class MovementHandler {
 
             controller.refreshBoard();
             controller.resetSelection();
+            controller.getMenuHandler().handleAutoSaveGame();
 
         } else {
             Toolkit.getDefaultToolkit().beep();

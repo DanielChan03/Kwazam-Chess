@@ -8,6 +8,7 @@ public class MenuHandler {
     private GameController controller;
     private boolean autoFlip = true;
     private boolean moveHint = true;
+    private boolean autoSave = false;
 
     public MenuHandler(GameController controller) {
         this.controller = controller;
@@ -59,6 +60,12 @@ public class MenuHandler {
         }
     }
 
+    public void handleAutoSaveGame(){
+        if (autoSave){
+        controller.getModel().autoSaveGame();
+        }
+    }
+
     public void handleLoadGame() {
 
         List<String> savedGames = controller.getModel().listSavedGames();
@@ -72,6 +79,8 @@ public class MenuHandler {
             controller.getModel().loadGame(selectedFile);
             controller.refreshBoard();
             controller.getView().loadGameMessage();
+            // check game over if game ended
+            controller.checkGameOver();
         }
     }
 
@@ -81,6 +90,15 @@ public class MenuHandler {
 
     public boolean getMoveHint() {
         return moveHint;
+    }
+
+    public boolean getAutoSave(){
+        return autoSave;
+    }
+
+    public void toggleAutoSave() {
+        this.autoSave = !autoSave;
+        controller.refreshBoard();
     }
 
     public void toggleAutoFlip() {
